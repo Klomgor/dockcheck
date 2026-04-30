@@ -23,6 +23,16 @@ ___
 
 ## Changelog
 
+- **v0.7.8**:
+  - New:
+    - More URLs to urls.list.
+    - Added new option to hide "No Updates available" and only output updateable images.
+      - Toggled with flag `-o` or config option `OnlyShowUpdateable=true`
+  - Fixes:
+    - Bugfix and tag support in Apprise template. by @mag37 in https://github.com/mag37/dockcheck/pull/276
+    - Clarify interaction between `-b` and `-p` options by @alaaalii in https://github.com/mag37/dockcheck/pull/277
+      - When `-b` is used the `-p` option is ignored - as pruning is respecting backups.
+    - File notification and JSON format rework.
 - **v0.7.7**:
   - New:
     - More URLs to urls.list.
@@ -39,22 +49,8 @@ ___
     - Fixed hostname fallback for notifications.
     - Clenaed up README.md some.
     - Sorted and clarified `default.config` - migrate your settings manually (optional).
-- **v0.7.5**:
-  - Added new option **BackupForDays**; `-b N` and `-B`:
-    - Backup an image before pulling a new version for easy rollback in case of breakage.
-    - Removes backed up images older than *N* days.
-    - List currently backed up images with `-B`.
-  - Fixes:
-    - Bugfix for `-s` *Stopped* to not recreate stopped containers after update.
-- **v0.7.4**:
-  - Added new option `-R`:
-    - Will skip container recreation after pulling images.
-    - Allows for more control and possible pipeline integration.
-  - Fixes:
-    - Bugfix for *value too great* error due to leading zeroes - solved with base10 conversion.
-    - Clean up of some legacy readme sections.
 
-___
+
 
 ![example.gif](extras/example.gif)
 
