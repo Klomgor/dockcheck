@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-VERSION="v0.7.7"
-# ChangeNotes: xmpp template added, ranges for selection possible, restart-stack and -s reworked.
+VERSION="v0.7.8"
+# ChangeNotes: bugfixes in apprise and file notifications. New option -o to only print updateable containers.
 Github="https://github.com/mag37/dockcheck"
 RawUrl="https://raw.githubusercontent.com/mag37/dockcheck/main/dockcheck.sh"
 
